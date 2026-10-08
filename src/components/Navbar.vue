@@ -105,9 +105,13 @@ onUnmounted(() => {
   left: 0;
   width: 100%;
   z-index: 1000;
-  transition: all var(--transition-smooth);
   padding: 22px 0;
   background: transparent;
+  border-bottom: 1px solid transparent;
+  transition: background var(--transition-smooth),
+              padding var(--transition-smooth),
+              border-color var(--transition-smooth),
+              box-shadow var(--transition-smooth);
 }
 
 .navbar-scrolled,
@@ -257,14 +261,19 @@ onUnmounted(() => {
   top: 70px;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.72);
+  background: rgba(0, 0, 0, 0.75);
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   padding: 24px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
-  transform: translateY(-120%);
-  transition: transform var(--transition-smooth);
+  transform: translateY(-15px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity var(--transition-smooth), 
+              transform var(--transition-smooth), 
+              visibility var(--transition-smooth);
 }
 
 @media (max-width: 992px) {
@@ -275,6 +284,9 @@ onUnmounted(() => {
 
 .mobile-drawer.is-open {
   transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .mobile-nav {
