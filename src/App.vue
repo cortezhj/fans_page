@@ -30,9 +30,15 @@ import Footer from './components/Footer.vue'
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 main {
   flex: 1;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 </style>

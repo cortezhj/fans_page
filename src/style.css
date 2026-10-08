@@ -56,6 +56,8 @@
 html {
   scroll-behavior: smooth;
   color-scheme: dark;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 body {
@@ -63,6 +65,7 @@ body {
   background-color: var(--bg-black);
   color: var(--text-white);
   line-height: 1.6;
+  max-width: 100%;
   overflow-x: hidden;
   position: relative;
   background-image:

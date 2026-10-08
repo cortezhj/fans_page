@@ -201,10 +201,24 @@ const platforms = [
 }
 
 @media (max-width: 480px) {
+  .hero-badge {
+    padding: 6px 14px;
+    gap: 6px;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .badge-text,
+  .badge-track {
+    font-size: 0.72rem;
+  }
+
   .hero-title {
-    font-size: clamp(1.85rem, 8.2vw, 2.6rem);
+    font-size: clamp(1.65rem, 8vw, 2.4rem);
     letter-spacing: 0.02em;
-    gap: 0.12em;
+    gap: 0.08em;
+    white-space: normal;
+    flex-wrap: wrap;
   }
 }
 
